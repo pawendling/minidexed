@@ -1,15 +1,17 @@
+// 6/1/26 PAW version 1.0  - All fits 
+//
 // Parameters
 cube_x = 160;
 cube_y = 40;
 cube_z = 2;
 
-opening_x = 73.0;
-opening_y = 25.6;
+opening_x = 73.0-.5;
+opening_y = 25.6-.5;
 
 peg_diameter = 6;
 peg_height = 5;          
 peg_hole_diameter = 2.6; 
-peg_spacing_x = 76.5;
+peg_spacing_x = 76.5-1.4;
 peg_spacing_y = 31.4;
 
 //edge_hole_diameter = 7;   // New 7mm holes
@@ -57,12 +59,12 @@ difference() {
             cylinder(h = cube_z + 2, r = edge_hole_diameter / 2, center = false);
             if (x == -1) 
                // Pot 
-               translate ([9.4, -1.5, 0])
-                  cube([1.8, 3.0, 20]); 
+               translate ([7.4, -1.6, 0])
+                  cube([1.8, 3.4, 20]); 
             else
                // Encoder knob 
-               translate ([-1.5, 6.5, 0])
-                  cube([2.5, 1, 20]); 
+               translate ([-1.4, 5.6, 0])
+                  cube([2.6, 1.4, 20]); 
         }
     }
     
